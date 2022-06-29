@@ -15,5 +15,9 @@ and add
 
 to your ncmpcpp config
 
+to start ncmpcpp now just run
+
+`kitty -o allow_remote_control=yes --listen-on unix:/tmp/mykitty -e ncmpcpp`
+
 beware this implementation is kinda junky, because i wasnt able to set the background image correctly everytime if the process wasnt detached from the main one
 if you know how to fix this/have a better implementation feel free to commit !
