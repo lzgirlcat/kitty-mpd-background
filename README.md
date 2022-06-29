@@ -1,4 +1,5 @@
 # kitty-mpd-background
+![image showcasing the functionality](https://github.com/uwulily/kitty-mpd-background/blob/main/images/1.png?raw=true)
 ### Automatically change the kitty background to the currently playing song!
 
 install the dependencies by running
