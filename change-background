@@ -1,0 +1,2 @@
+#!/usr/bin/sh
+mpc readpicture "$(mpc -f %file% | head -n 1)" | ffmpeg -hide_banner -loglevel error -i pipe: -filter:v "scale=$(kitty icat --print-window-size),eq=brightness=-0.15" -c:a copy -y /tmp/current_kitty_ncmpcpp_background.png && kitty @ set-background-image /tmp/current_kitty_ncmpcpp_background.png
