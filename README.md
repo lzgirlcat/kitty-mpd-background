@@ -1,0 +1,1 @@
+# kitty-mpd-background
