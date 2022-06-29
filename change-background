@@ -1,2 +1,5 @@
-#!/usr/bin/sh
-mpc readpicture "$(mpc -f %file% | head -n 1)" | ffmpeg -hide_banner -loglevel error -i pipe: -filter:v "scale=$(kitty icat --print-window-size),eq=brightness=-0.15" -c:a copy -y /tmp/current_kitty_ncmpcpp_background.png && kitty @ set-background-image /tmp/current_kitty_ncmpcpp_background.png
+#!/usr/bin/bash
+mpc readpicture "$(mpc -f %file% | head -n 1)" > /tmp/before_ffmpeg
+ffmpeg -hide_banner -loglevel error -y -i /tmp/before_ffmpeg -filter:v "scale=$1:force_original_aspect_ratio=increase,eq=brightness=-0.15" -c:a copy /tmp/current_background.png
+sleep 2
+kitty @ --to unix:/tmp/mykitty set-background-image /tmp/current_background.png

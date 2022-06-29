@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+~/.config/ncmpcpp/change-background $(kitty icat --print-window-size) &
+disown
