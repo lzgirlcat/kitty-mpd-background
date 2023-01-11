@@ -1,6 +1,8 @@
 # kitty-mpd-background
+
 ![image showcasing the functionality](https://github.com/lzgirlcat/kitty-mpd-background/blob/main/images/1.png?raw=true)
-### Automatically change the kitty background to the currently playing song!
+
+### Automatically change the kitty background to the currently playing song
 
 install the dependencies by running
 
@@ -8,11 +10,13 @@ install the dependencies by running
 
 ## To use with ncmpcpp simply run
 
-`curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/change-background > .config/ncmpcpp/change-background & curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/wrapper > .config/ncmpcpp/wrapper`
+`curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/change-background > ~/.config/ncmpcpp/change-background && curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/wrapper > ~/.config/ncmpcpp/wrapper && chmod u+x ~/.config/ncmpcpp/change-background ~/.config/ncmpcpp/config`
 
 and add
 
-`execute_on_song_change="~/.config/ncmpcpp/wrapper""`
+`execute_on_song_change="~/.config/ncmpcpp/wrapper"`
+
+(run `echo 'execute_on_song_change="~/.config/ncmpcpp/wrapper"' >> ~/.config/ncmpcpp/config` if you have your config at `~/.config/ncmpcpp/config`)
 
 to your ncmpcpp config
 

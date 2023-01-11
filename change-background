@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 mpc readpicture "$(mpc -f %file% | head -n 1)" > /tmp/before_ffmpeg
 ffmpeg -hide_banner -loglevel error -y -i /tmp/before_ffmpeg -filter:v "scale=$1:force_original_aspect_ratio=increase,eq=brightness=-0.15" -c:a copy /tmp/current_background.png
 kitty @ --to unix:/tmp/kittyncmpcpp set-background-image /tmp/current_background.png >/dev/null 2>&1
