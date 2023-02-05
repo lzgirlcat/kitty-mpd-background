@@ -8,11 +8,11 @@ install the dependencies by running
 
 ## To use with ncmpcpp simply run
 
-`curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/change-background > .config/ncmpcpp/change-background & curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/wrapper > .config/ncmpcpp/wrapper`
+`curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/change-background > ~/.config/ncmpcpp/change-background & curl https://raw.githubusercontent.com/lzgirlcat/kitty-mpd-background/main/wrapper > ~/.config/ncmpcpp/wrapper`
 
-and add
+and add then
 
-`execute_on_song_change="~/.config/ncmpcpp/wrapper""`
+`echo execute_on_song_change="~/.config/ncmpcpp/wrapper" >> ~/.config/ncmpcpp/config`
 
 to your ncmpcpp config
 
